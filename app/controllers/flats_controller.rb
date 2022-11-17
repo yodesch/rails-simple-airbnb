@@ -38,11 +38,10 @@ class FlatsController < ApplicationController
   end
 
   def search
-    binding.pry
-    if params[:search].blank?
+    if params[:query].blank?
       redirect_to flats_path and return
     else
-      @parameter = params[:search].downcase
+      @parameter = params[:query].downcase
       @results = Flat.all.where('lower(name) LIKE :search', search: "%#{@parameter}%")
     end
   end

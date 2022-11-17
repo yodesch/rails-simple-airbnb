@@ -15,6 +15,22 @@
  */
 
 
+ @media (min-width: 992px) {
+   .cards {
+     display: inline-flex;
+     justify-content: space-between;
+     align-items: flex-start;
+     flex-wrap: wrap;
+     list-style-type: none;
+   }
+ }
+
+ h1 {
+  padding: 8px;
+  text-align: center;
+  text-justify: distribute;
+ }
+
  .card-trip {
   overflow: hidden;
   background: white;
@@ -75,13 +91,6 @@
   top: 8px;
   bottom: 8px;
   right: 8px;
-
-}
-
-.search-form-control .form-control {
-  height: 2,5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  border: 1px solid #E7E7E7;
 }
 
 .search-form-control .form-control:focus {
