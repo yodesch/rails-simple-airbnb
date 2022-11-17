@@ -1,0 +1,18 @@
+<h1>Show Flat</h1>
+
+<div class="card-trip">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= @flat.name %></h2>
+        <p><%= @flat.description %></p>
+        <p><i class="fa-solid fa-people-roof"></i><%= @flat.number_of_guests%></p>
+    </div>
+      <h2 class="card-trip-pricing"><%= @flat.price_per_night%>€</h2>
+  </div>
+  <div>
+    <%= link_to "Remove",flat_path(@flat), class:"btn btn-link text-danger",
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+    <%= link_to "Edit", edit_flat_path, class:"btn btn-link text-warning",data: {turbo_method: :get} %>
+  </div>
+</div>
